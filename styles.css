@@ -1,3 +1,11 @@
+.game-divider {
+    width: 120px;
+    margin: 0px auto 0px auto;
+    border: none;
+    border-top: 2.5px solid #2E9DF7; /* Brand Blue */
+    border-radius: 2px;
+    background: none;
+}
 /* Charity: water Brand Colors & Fonts
 
 Primary Colors:
@@ -24,13 +32,26 @@ Fonts:
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('https://cdn2.editmysite.com/fonts/Proxima-Light/267447_4_0.eot'); /* IE9 Compatibility */
+    src: url('https://cdn2.editmysite.com/fonts/Proxima-Light/267447_4_0.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn2.editmysite.com/fonts/Proxima-Light/267447_4_0.woff') format('woff'),
+    url('https://cdn2.editmysite.com/fonts/Proxima-Light/267447_4_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
     background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
+    font-family: 'Proxima Nova', Arial, sans-serif;
+    padding-bottom: 16px; /* Slight padding at the end of the page for all devices */
 }
 
 .game-wrapper {
@@ -38,6 +59,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    margin-top: 20px;
 }
 
 .score-panel {
@@ -55,11 +77,12 @@ body {
     flex: 0 1 auto;
     font-size: 24px;
     font-weight: bold;
+    color: #2E9DF7; /* Brand Blue */
 }
 
 #game-container {
     width: 800px;
-    height: 600px;
+    height: 550px;
     background-color: #e6f7ff;
     border: 2px solid #333;
     border-radius: 8px;
@@ -70,58 +93,60 @@ body {
 
 #start-btn {
     padding: 8px 16px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #4FCB53; /* Brand Green */
+    color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    transition: background 0.2s;
 }
 
 #start-btn:hover {
-    background-color: #45a049;
+    background-color: #159A48; /* Brand Dark Green */
 }
 
 .score {
-    flex: 0 1 auto;  /* Don't grow, can shrink, auto basis */
+    flex: 0 1 auto;
     font-size: 24px;
     font-weight: bold;
+    color: #2E9DF7; /* Brand Blue */
 }
 
 .water-drop {
     position: absolute;
-    width: 60px;  /* increased from 40px */
-    height: 60px; /* increased from 40px */
-    background-color: #0099ff;
+    width: 60px;
+    height: 60px;
+    background-color: #2E9DF7; /* Brand Blue */
     border-radius: 50%;
     animation: dropFall linear forwards;
     transform-origin: center;
     cursor: pointer;
-    padding: 15px;  /* Add padding for larger click area */
-    margin: -15px;  /* Offset padding to maintain visual size */
-    transition: transform 0.1s ease;  /* Smooth hover effect */
+    padding: 15px;
+    margin: -15px;
+    transition: transform 0.1s ease;
 }
 
 .water-drop:hover {
-    transform: scale(1.1);  /* Slight grow effect on hover */
+    transform: scale(1.1);
 }
 
 .bad-drop {
-    background-color: #ff4444;
+    background-color: #F5402C; /* Brand Red */
 }
 
 .game-title {
-    color: #131313;
+    color: #2E9DF7; /* Brand Blue */
     font-size: 48px;
     margin-top: 0;
-    margin-bottom: 5px;  /* reduced from 20px */
+    margin-bottom: 0;
     text-align: center;
 }
 
 .game-tagline {
-    color: #666;
+    color: #222;
     font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
